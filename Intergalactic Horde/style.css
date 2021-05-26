@@ -1,0 +1,108 @@
+body{
+	font-family: Impact, Charcoal, sans-serif;
+	color: #FFF;
+	background-image: url("space.jpg");
+	background-size: cover;
+}
+
+#section1{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -75px 0 0 -75px;
+}
+
+#loader {
+	position: relative;
+	z-index: 1;
+	width: 150px;
+	height: 100px;
+	background-image: url('logo.png');
+	background-size: cover;
+}
+
+#loadingText{
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+#text{
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	margin-top: 20px;
+}
+
+#playWindow{
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+#playArea{
+	position: relative;
+	width: 720px;
+	height: 576px;
+	border: 2px solid #29B6F6;
+	background-image: url("cosmos.jpg");
+	background-size: cover;
+	top: 30px;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+#scoreContainer{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	text-align: left;
+	font-size: 1.5em;
+	width: 100%;
+	z-index: 30;
+}
+
+.score{
+	padding: 10px;
+	float: left;
+}
+
+.sprite{
+	position: absolute;
+	z-index: 10;
+	background-size: cover;
+}
+
+#messageContainer{
+	position: relative;
+	top: 100px;
+	text-align: center;
+	width: 100%;
+	z-index: 40;
+}
+
+.message{
+	font-size: 3em;
+	padding: 20px;
+}
+
+@keyframes explosion {
+	0%   {background-image: url("assets/Explosion/explosion1.png");}
+	20%   {background-image: url("assets/Explosion/explosion2.png"); }
+	40%   {background-image: url("assets/Explosion/explosion3.png");}
+	60%   {background-image: url("assets/Explosion/explosion4.png"); opacity: 0.9;}
+	80%   {background-image: url("assets/Explosion/explosion5.png"); opacity: 0.8;}
+	100%   {background-image: url("assets/Explosion/explosion6.png"); opacity: 0.5;}
+}
+
+.explosion{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 100000px;
+	top: 300px;
+	animation-name: explosion;
+	animation-duration: 0.5s;
+	background-repeat: no-repeat;
+	z-index: 20;
+}

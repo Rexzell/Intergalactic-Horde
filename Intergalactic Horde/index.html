@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Intergalactic Horde</title>
+	<link rel="shortcut icon" type="image/x-icon" href="logo.png"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/> 
+</head>
+
+<body onload="load()">
+	<div id="section1">
+	<div id="loader"></div>
+	<div id="loadingText"><h1>Loading</h1></div>
+	</div>
+
+	<div style="display:none;" id="myDiv">
+	<div id="text">Use WASD or Arrow Keys to move.</div>
+	<div id="playWindow">
+		<div id="playArea">
+			<div id="scoreContainer">
+				<div class="score" id="lives"></div>
+				<div class="score" id="score"></div>
+				<div class="score" id="highScore"></div>
+			</div>
+			<div id="messageContainer">
+			</div>
+			<div class="explosion"></div>
+			<audio src="bgmusic.mp3" id="bgm" loop></audio>
+		</div>
+	</div>
+	</div>
+
+	<script>
+	var myVar;
+
+	function load() {
+	  myVar = setTimeout(showPage, 5000);
+	}
+
+	function showPage() {
+	  document.getElementById("loader").style.display = "none";
+	  document.getElementById("loadingText").style.display = "none";
+	  document.getElementById("myDiv").style.display = "block";
+	}
+	</script>
+
+
+	<script src="js/jquery331.min.js"></script>
+	<script src="js/JScript.js"></script>
+	<script src="js/defs.js"></script>
+	<script src="js/Sounds.js"></script>
+	<script src="js/Size.js"></script>
+	<script src="js/Point.js"></script>
+	<script src="js/Rect.js"></script>
+	<script src="js/Sprite.js"></script>
+	<script src="js/Explosion.js"></script>
+	<script src="js/Bullet.js"></script>
+	<script src="js/Enemy.js"></script>
+	<script src="js/Waypoint.js"></script>
+	<script src="js/Player.js"></script>
+</body>
+
+</html>
